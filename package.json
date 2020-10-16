@@ -1,44 +1,62 @@
 {
   "name": "pixi-container-helpers",
   "version": "0.1.0",
-  "description": "TODO",
+  "description": "Provides helper methods to work with PIXI containers in various ways.",
   "main": "index.js",
   "module": "pixi-container-helpers.js",
   "typings": "lib/index.ts",
   "scripts": {
+    "test": "node test/server.js",
+    "rm:build": "rm -rf lib",
+    "rm:bundle": "rm -rf pixi-container-helpers.js test/pixi-container-helpers.js",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
     "build": "npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "bundle": "rollup -c",
-    "bundle:watch": "rollup -c --watch"
+    "bundle:watch": "rollup -c --watch",
+    "prepare": "npm run rm:build && npm run rm:bundle && npm run build && npm run bundle"
   },
   "repository": {
     "type": "git",
-    "url": "TODO"
+    "url": "https://github.com/robertcorponoi/pixi-container-helpers.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "pixi",
+    "pixi.js",
+    "container",
+    "helpers",
+    "grid",
+    "align",
+    "place",
+    "circle",
+    "polygon",
+    "alpha",
+    "rotate"
+  ],
+  "author": "Robert Corponoi",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-proposal-numeric-separator": "^7.10.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-typescript": "^7.10.4",
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-numeric-separator": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
-    "fastify": "^3.5.1",
+    "@types/earcut": "^2.1.1",
+    "fastify": "^3.6.0",
     "fastify-static": "^3.2.1",
     "pixi.js": "^5.3.3",
-    "rollup": "^2.28.2",
+    "rollup": "^2.31.0",
     "typescript": "^4.0.3"
   },
   "dependencies": {
-    "collider2d": "^1.1.0"
+    "collider2d": "^1.1.0",
+    "earcut": "^2.2.2"
   }
 }
