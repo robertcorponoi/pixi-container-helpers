@@ -26,16 +26,6 @@ To install this module through npm, simply use the following command:
 $ npm install pixi-container-helpers
 ```
 
-and to use it, you can import it as an ES6 module:
-
-```js
-// Webpack
-import pixi-container-helpers from 'pixi-container-helpers';
-
-// Browser
-import pixi-container-helpers from './node_modules/pixi-container-helpers/pixi-container-helpers.js';
-```
-
 ## **API**
 
 `pixi-container-helpers` is just a set of functions that can be imported individually that work with your existing containers.
